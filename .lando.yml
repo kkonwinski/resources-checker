@@ -1,0 +1,16 @@
+name: resurces-checker
+recipe: symfony
+config:
+  php: '7.4'
+  webroot: ./public
+  database: mysql
+  cache: redis
+services:
+  node:
+    type: node
+    globals:
+      yarn: latest
+  pma:
+    type: phpmyadmin
+    hosts:
+      - database
