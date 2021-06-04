@@ -20,9 +20,9 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-{#                Z#}
-                <div class="sidebar-brand-text mx-3">Resurces Checker</div>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('welcome') }}">
+
+                <div class="sidebar-brand-text mx-3">Resources Checker</div>
             </a>
 
             <!-- Divider -->
@@ -135,7 +135,7 @@
             <!-- Main Content -->
             <div id="content">
 
-              {{ include('sb-admin/top_navbar.html.twig') }}
+                {{ include('sb-admin/top_navbar.html.twig') }}
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -155,19 +155,13 @@
                         {% endblock %}
                     </div>
 
-                <!-- End of Content Wrapper -->
+                    <!-- End of Content Wrapper -->
 
+                </div>
             </div>
-        </div>
             <!-- End of Main Content -->
             {{ include('sb-admin/footer.html.twig') }}
-{#            {% block footer1 %}#}
 
-
-
-
-
-{#            {% endblock %}#}
 
         </div>
     </div>
@@ -177,5 +171,5 @@
         <script src={{ asset('assets/bootstrap-admin2/js/jquery-easing/jquery.easing.min.js') }}></script>
         <script src={{ asset('assets/bootstrap-admin2/js/chart.js/Chart.bundle.min.js') }}></script>
         <script src={{ asset('assets/bootstrap-admin2/js/sb-admin-2.min.js') }}></script>
-{% endblock %}
+    {% endblock %}
 {% endblock %}
