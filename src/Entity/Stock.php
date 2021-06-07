@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=StockRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class Stock extends TimeUpdater
 {

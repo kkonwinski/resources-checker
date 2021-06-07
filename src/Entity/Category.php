@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class Category extends TimeUpdater
 {
@@ -80,5 +81,10 @@ class Category extends TimeUpdater
         }
 
         return $this;
+    }
+
+    public function __toString():string
+    {
+        return $this->getName();
     }
 }

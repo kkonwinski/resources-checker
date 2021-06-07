@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class Product extends TimeUpdater
 {
@@ -124,5 +125,9 @@ class Product extends TimeUpdater
         $this->stock = $stock;
 
         return $this;
+    }
+    public function __toString():string
+    {
+        return $this->getName();
     }
 }
